@@ -1,0 +1,18 @@
+body {
+    background-color: #111;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+canvas {
+    width: 1200px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    border: 1px solid green;
+}
