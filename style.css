@@ -1,5 +1,7 @@
 body {
-    background-color: #111;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #222, black);
 }
 
 main {
@@ -14,5 +16,5 @@ canvas {
     height: 800px;
     position: absolute;
     top: 0;
-    border: 1px solid green;
+    border: 4px solid #aaa;
 }

@@ -3,12 +3,12 @@ const bg = canvasBg.getContext("2d");
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext("2d");
-ctx.lineWidth = 2;
+ctx.lineWidth = 4;
 
 const center = {x: canvas.width / 2, y: canvas.height / 2}
 const radius = canvas.height / 2 - 150;
 
-bg.lineWidth = 2
+bg.lineWidth = 4
 bg.beginPath();
 bg.arc(center.x, center.y, radius, 0, 2 * Math.PI);
 bg.strokeStyle = 'yellow'
@@ -33,8 +33,8 @@ document.addEventListener('mousemove', function(evt) {
     ctx.lineTo(intersectionX, intersectionY);
 
     // draw line perpendicular
-    ctx.moveTo(intersectionX + 1000 * Math.sin(angle), intersectionY - 1000 * Math.cos(angle));
-    ctx.lineTo(intersectionX - 1000 * Math.sin(angle), intersectionY + 1000 * Math.cos(angle));
+    ctx.moveTo(intersectionX + canvas.width * Math.sin(angle), intersectionY - canvas.width * Math.cos(angle));
+    ctx.lineTo(intersectionX - canvas.width * Math.sin(angle), intersectionY + canvas.width * Math.cos(angle));
 
     ctx.strokeStyle = 'orange'
     ctx.stroke();
